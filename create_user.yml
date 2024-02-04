@@ -1,0 +1,8 @@
+---
+- name: My first user deletion
+  hosts: all
+  become: yes
+  tasks:
+    - name: Deleting a new user Ramesh
+      user: name=Ramesh 
+...

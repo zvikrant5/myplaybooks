@@ -1,0 +1,9 @@
+---
+- name: Delete a user
+  hosts: webservers[1]
+  become: yes  # This enables privilege escalation to perform administrative tasks
+  tasks:
+    - name: Ensure the user is absent
+      user:
+        name: Raj  # Specify the username you want to delete
+        state: absent        # This ensures the user is absent from the system

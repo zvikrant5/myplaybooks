@@ -1,0 +1,18 @@
+---
+- name: My Test Playbook
+  hosts: all
+  become: true
+  tasks:
+  - name: Install Git package on RedHat Family
+    yum:
+      name: git
+      state: installed
+    when: ansible_os_family == "RedHat"
+  
+  - name: Install Git package on Debian Family
+    apt:
+      name: git
+      state: present
+    when: ansible_os_family == "Debian"
+...
+

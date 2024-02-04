@@ -1,0 +1,10 @@
+---
+- name: My Test Application
+  hosts: all
+  become: true
+  tasks:
+    - name: Install Packages
+      yum:
+        name: ['git','make','gcc','wget','telnet','tree','which','docker']
+        state: installed
+...

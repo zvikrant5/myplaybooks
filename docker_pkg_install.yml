@@ -1,0 +1,17 @@
+---
+- name: My Test Application
+  hosts: all
+  become: true
+  tasks:
+    - name: Install Docker Package
+      yum:
+        name: httpd
+        state: installed
+      notify: Start Service
+  
+  handlers:
+    - name: Start Service
+      service:
+        name: httpd
+        state: started
+...

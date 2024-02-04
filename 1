@@ -1,0 +1,10 @@
+---
+- name: My Test Application
+  hosts: all
+  become: true
+  tasks:
+    - name: delete a file
+      file:
+        path: /home/ansadmin/shaktiman
+        state: absent
+...

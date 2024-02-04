@@ -1,0 +1,11 @@
+---
+- name: My Test Playbook
+  hosts: all
+  become: true
+  tasks:
+    - name: Create a directory
+      file:
+        path: /home/ansadmin/testdir
+        state: directory
+...
+

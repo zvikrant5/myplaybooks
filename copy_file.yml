@@ -1,0 +1,11 @@
+---
+- name: My Test Application
+  hosts: all
+  become: true
+  tasks:
+    - name: Copy a file
+      copy:
+        src: /home/ansadmin/file1
+        dest: /home/ansadmin/testdir/
+        mode: '0600'
+...

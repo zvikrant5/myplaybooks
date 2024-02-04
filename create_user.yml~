@@ -1,0 +1,8 @@
+---
+- name : The Purpose of this file is to create new user
+  hosts: all
+  become: yes
+  tasks:
+   - name: Creating new user Ram
+     user: name= Ram
+

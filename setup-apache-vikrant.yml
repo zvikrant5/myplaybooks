@@ -1,0 +1,7 @@
+---
+- name: My Test Application
+  hosts: all
+  become: true
+  roles:
+    - setup-apache-role
+...
